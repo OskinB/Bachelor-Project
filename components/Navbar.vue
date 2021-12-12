@@ -1,7 +1,6 @@
 <template>
-  <div class="flex flex-col">
-    <h1>Index page</h1>
-    <Button />
+  <div class="">
+    <h3 class="text-blue-600">Navbar here</h3>
   </div>
 </template>
 
