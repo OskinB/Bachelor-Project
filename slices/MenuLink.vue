@@ -1,5 +1,9 @@
 <template>
-  <div>Main Link slice</div>
+  <div class="text-blue-700">
+    <prismic-link :field="primary.link">{{
+      $prismic.asText(primary.link_label || {})
+    }}</prismic-link>
+  </div>
 </template>
 
 <script>
@@ -15,7 +19,11 @@ export default {
   data() {
     return {}
   },
-  computed: {},
+  computed: {
+    primary() {
+      return this.slice?.primary || {}
+    },
+  },
   methods: {},
 }
 </script>

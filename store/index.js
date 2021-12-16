@@ -14,11 +14,7 @@ export const mutations = {
 export const actions = {
   async fetchMenu({ commit }, $prismic) {
     try {
-      const menu = (
-        await $prismic.api.getSingle('main_menu', {
-          fetchLinks: 'sub_page.parent_page',
-        })
-      ).data
+      const menu = (await $prismic.api.getSingle('main_menu')).data
       commit('SET_STATE', { name: 'menu', item: menu })
     } catch (e) {
       // const error = 'Please create a menu document'

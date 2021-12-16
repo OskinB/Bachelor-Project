@@ -38,10 +38,6 @@ export default {
     modern: true,
   },
 
-  googleFonts: {
-    families: {},
-  },
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios

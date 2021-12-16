@@ -1,12 +1,13 @@
 <template>
   <header>
-    <nav>
+    <nav class="bg-gray-300">
       <div>Logo</div>
       <div>
         <slice-zone
           type="main_menu"
           queryType="single"
-          :params="{ fetchLinks: 'sub_page.parent_page' }"
+          :resolver="resolver"
+          :slices="links"
         />
       </div>
     </nav>
@@ -25,12 +26,18 @@ export default {
     return {}
   },
   computed: {
-    // Get menu from Store
     menu() {
       return this.$store.getters.menu
     },
+    links() {
+      return this.menu?.body
+    },
   },
-  methods: {},
+  methods: {
+    resolver({ sliceName }) {
+      return import(`~/slices/${sliceName}.vue`)
+    },
+  },
 }
 </script>
 
