@@ -23,8 +23,7 @@ export default {
   },
   async asyncData({ $prismic }) {
     try {
-      const data = await $prismic.api.getSingle('m')
-      // const data = await $prismic.api.getSingle('home')
+      const data = await $prismic.api.getSingle('home')
       return data
     } catch (error) {
       console.log(error)

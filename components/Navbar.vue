@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="bg-gray-300">
+    <nav class="bg-gray-300 flex justify-between">
       <div>Logo</div>
       <div>
         <slice-zone
