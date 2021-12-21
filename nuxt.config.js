@@ -29,7 +29,14 @@ export default {
     '@nuxtjs/tailwindcss',
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/prismic',
+    '@nuxtjs/google-fonts',
   ],
+
+  prismic: {
+    endpoint: 'https://bachelor-project.prismic.io/api/v2',
+    modern: true,
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -41,5 +48,7 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ['vue-slicezone', 'nuxt-sm'],
+  },
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="m-4">
     <Navbar />
     <Nuxt />
   </div>
@@ -7,10 +7,9 @@
 
 <script>
 export default {
-  //! Called before rendering the layout (even for error page)
-  // async middleware({ store, $prismic }) {
-  //     await store.dispatch('fetchMenu', $prismic)
-  //     await store.dispatch('fetchFooter', $prismic)
-  // }
+  // Called before rendering the layout
+  async middleware({ store, $prismic }) {
+    await store.dispatch('fetchMenu', $prismic)
+  },
 }
 </script>
