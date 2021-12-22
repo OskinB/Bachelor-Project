@@ -1,6 +1,6 @@
 <template>
-  <div class="m-3">
-    <h1>Index page</h1>
+  <div class="max-w-contentMin">
+    <h1 class="typo-h-highlight-desktop text-teal">Index page</h1>
     <slice-zone
       type="home"
       queryType="single"

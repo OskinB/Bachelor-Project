@@ -4,4 +4,71 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply antialiased font-body bg-white;
+  }
+}
+
+@layer components {
+  /*  TYPOGRAPHY */
+  /* *** HEADING *** */
+  .typo-h-xl {
+    @apply font-heading text-[2.5rem] leading-[110%] font-medium;
+    /* hero title */
+  }
+  .typo-h-xl-desktop {
+    @apply font-heading text-[4rem] leading-[110%] font-medium;
+    /* hero title */
+  }
+  .typo-h-lg {
+    @apply font-heading text-[2rem] leading-[110%] font-medium;
+    /* page title */
+  }
+  .typo-h-lg-desktop {
+    @apply font-heading text-[2.5rem] leading-[110%] font-medium;
+    /* page title */
+  }
+  .typo-h-md-desktop {
+    @apply font-heading text-3xl leading-[110%] font-medium;
+    /* big card title */
+  }
+  .typo-h-sm {
+    @apply font-heading text-[1.375rem] leading-[110%] font-medium;
+    /* small card title */
+  }
+  .typo-h-sm-desktop {
+    @apply font-heading text-2xl leading-[110%] font-medium;
+    /* small card title */
+  }
+
+  /* *** BODY *** */
+  .typo-b-lg {
+    @apply text-lg leading-[140%] font-light;
+    /* hero text */
+  }
+  .typo-b-lg-desktop {
+    @apply text-2xl leading-[140%] font-light;
+    /* hero text */
+  }
+  .typo-b-md {
+    @apply text-sm leading-[140%];
+    /* normal text - has 3 different weight */
+  }
+  .typo-b-md-desktop {
+    @apply text-base leading-[140%];
+    /* normal text - has 3 different weight */
+  }
+
+  /* *** HIGHLIGHT *** */
+  .typo-h-highlight {
+    @apply font-heading text-sm leading-[110%] font-semibold uppercase;
+  }
+  .typo-h-highlight-desktop {
+    @apply font-heading text-base leading-[110%] font-semibold uppercase;
+  }
+
+  /* *** MENU *** */
+  .typo-h-menu {
+    @apply font-heading text-base leading-[110%] font-semibold;
+  }
 }
