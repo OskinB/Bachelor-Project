@@ -33,6 +33,13 @@ export default {
     '@nuxtjs/google-fonts',
   ],
 
+  googleFonts: {
+    families: {
+      Poppins: [500, 600],
+      'Work+Sans': [300, 400, 500],
+    },
+  },
+
   prismic: {
     endpoint: 'https://bachelor-project.prismic.io/api/v2',
     modern: true,

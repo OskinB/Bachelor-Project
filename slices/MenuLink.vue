@@ -1,5 +1,5 @@
 <template>
-  <div class="text-blue-700">
+  <div class="text-blue-700 font-heading">
     <prismic-link :field="primary.link">{{
       $prismic.asText(primary.link_label || {})
     }}</prismic-link>
