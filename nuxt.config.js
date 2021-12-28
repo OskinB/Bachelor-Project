@@ -31,6 +31,7 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/prismic',
     '@nuxtjs/google-fonts',
+    '@nuxt/image',
   ],
 
   googleFonts: {

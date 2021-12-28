@@ -1,16 +1,18 @@
 <template>
-  <header>
-    <nav class="bg-gray-300 flex justify-between">
-      <div>Logo</div>
-      <div>
-        <slice-zone
-          type="main_menu"
-          queryType="single"
-          :resolver="resolver"
-          :slices="links"
-        />
-      </div>
-    </nav>
+  <header class="bg-gray-300">
+    <ContentMaxWidth>
+      <nav class="flex justify-between">
+        <div>Logo</div>
+        <div>
+          <slice-zone
+            type="main_menu"
+            queryType="single"
+            :resolver="resolver"
+            :slices="links"
+          />
+        </div>
+      </nav>
+    </ContentMaxWidth>
   </header>
 </template>
 

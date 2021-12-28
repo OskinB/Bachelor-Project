@@ -1,7 +1,5 @@
 <template>
-  <div class="text-teal bg-lightgrey">
-    <h2>Ég er Menu prufu slice</h2>
-  </div>
+  <div class="bg-teal p-4">Hero banner COLOR</div>
 </template>
 
 <script>
@@ -15,6 +13,12 @@ export default {
       },
     },
   },
+  data() {
+    return {}
+  },
   computed: {},
+  methods: {},
 }
 </script>
+
+<style scoped></style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-contentMax">
+  <div>
     <Navbar />
     <Nuxt />
   </div>

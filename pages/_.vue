@@ -1,5 +1,5 @@
 <template>
-  <div class="m-3">Dynamic page !</div>
+  <div class="m-3">Dynamic page slices !</div>
 </template>
 
 <script>
