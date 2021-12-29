@@ -2,10 +2,10 @@
   <ContentMaxWidth class="bot-space">
     <div v-if="showSlice" class="md:flex" :class="layout ? 'flex-row' : 'flex-row-reverse'">
       <div class="gutter md:w-7/12 flex flex-col justify-center" :class="layout ? 'md:mr-4' : 'md:ml-4'">
-        <h1 class="mb-4 typo-h-xl lg:typo-h-xl-desktop">
+        <h1 class="mb-4 lg:mb-10 typo-h-xl lg:typo-h-xl-desktop">
           {{ $prismic.asText(title) }}
         </h1>
-        <prismic-rich-text :field="text" class="mb-6 typo-b-lg lg:typo-b-lg-desktop" />
+        <prismic-rich-text :field="text" class="mb-6 lg:mb-8 typo-b-lg lg:typo-b-lg-desktop" />
         <div v-if="showBtn" class="mb-6 flex justify-end">
           <prismic-link :field="link" class="bg-gray-200 font-medium outline-black w-max">
             {{ $prismic.asText(linkLabel) }}
