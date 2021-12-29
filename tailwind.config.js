@@ -1,11 +1,6 @@
 module.exports = {
   mode: 'jit',
-  purge: [
-    './components/**/*.vue',
-    './layouts/**/*.vue',
-    './slices/**/*.vue',
-    './pages/**/*.vue',
-  ],
+  purge: ['./components/**/*.vue', './layouts/**/*.vue', './slices/**/*.vue', './pages/**/*.vue'],
   theme: {
     fontFamily: {
       heading: ['Poppins', 'sans-serif'],
@@ -19,8 +14,10 @@ module.exports = {
         lightgrey: 'rgba(236, 240, 238, 1)', // background
         grey: 'rgba(103, 103, 103, 1)', // background
         darkgrey: 'rgba(51, 51, 51, 1)', // background
-        white: 'rgba(254, 254, 254, 1)', // Text
-        black: 'rgba(34, 34, 34, 1)', // Text
+        lightgreyFilter: 'rgba(236, 240, 238, 0.8)', // filter
+        darkgreyFilter: 'rgba(51, 51, 51, 0.9)', // filter
+        whiteText: 'rgba(254, 254, 254, 1)', // Text
+        blackText: 'rgba(34, 34, 34, 1)', // Text
       },
       maxWidth: {
         contentMax: '1248px',
