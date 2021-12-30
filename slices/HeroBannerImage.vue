@@ -53,11 +53,11 @@ export default {
     image() {
       return this.slice?.primary?.image
     },
-    showSlice() {
-      return Object.keys(this.image).length !== 0
-    },
     showBtn() {
       return Object.keys(this.linkLabel).length !== 0
+    },
+    showSlice() {
+      return Object.keys(this.image).length !== 0
     },
   },
 }

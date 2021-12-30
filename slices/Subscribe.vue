@@ -1,6 +1,6 @@
 <template>
   <div v-if="showSlice" :class="bgColor">
-    <ContentMaxWidth class="y-space padding-card px-2">
+    <ContentMaxWidth class="y-space padding-card lg:px-2">
       <div class="gutter flex flex-col md:grid grid-cols-3 gap-6">
         <div class="md:col-span-2">
           <h2 class="mb-heading typo-h-lg lg:typo-h-lg-desktop">
@@ -38,7 +38,7 @@ export default {
   },
   computed: {
     heading() {
-      return this.slice?.primary?.heading || {}
+      return this.slice?.primary?.heading
     },
     text() {
       return this.slice?.primary?.text
