@@ -6,9 +6,13 @@
           {{ $prismic.asText(title) }}
         </h2>
       </div>
-    </ContentMaxWidth>
 
-    <CardPopularProduct v-for="(item, i) in items" :key="i" :data="item" />
+      <div class="grid md:gap-6 grid-cols-1" :class="'md:grid-cols-' + gridCols">
+        <div v-for="(item, index) in filterEmpty" :key="index" class="flex h-full">
+          <CardPopularProduct :data="item" />
+        </div>
+      </div>
+    </ContentMaxWidth>
   </div>
 </template>
 
@@ -29,6 +33,13 @@ export default {
     },
     items() {
       return this.slice?.items
+    },
+    filterEmpty() {
+      return this.slice.items.filter((item) => Object.keys(item.image).length !== 0)
+    },
+    gridCols() {
+      if (this.filterEmpty?.length >= 3) return 3
+      return this.filterEmpty?.length || 1
     },
   },
 }
