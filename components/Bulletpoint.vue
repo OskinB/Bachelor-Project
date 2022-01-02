@@ -1,7 +1,6 @@
 <template>
-  <div class="flex flex-row">
-    <div class="mr-4 h-4 w-4 bg-teal rounded-lg"></div>
-    <prismic-rich-text :field="text" class="mb-text typo-b-md lg:typo-b-md-desktop" />
+  <div>
+    <RichText :data="text" class="relative special-bullet pl-6 lg:pl-8" />
   </div>
 </template>
 
@@ -16,16 +15,17 @@ export default {
       },
     },
   },
-  data() {
-    return {}
-  },
   computed: {
     text() {
       return this.data?.bulletin_text
     },
   },
-  methods: {},
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.special-bullet::before {
+  content: '';
+  @apply absolute top-[3px] left-0 h-3 w-3 bg-teal rounded-lg;
+}
+</style>

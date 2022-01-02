@@ -5,7 +5,7 @@
         <h2 class="mb-heading typo-h-lg lg:typo-h-lg-desktop">
           {{ $prismic.asText(heading) }}
         </h2>
-        <prismic-rich-text :field="text" class="mb-text typo-b-md lg:typo-b-md-desktop" />
+        <RichText :data="text" />
       </div>
       <div class="flex justify-end">
         <prismic-link :field="link" class="bg-gray-200 font-medium outline-black w-max">

@@ -11,7 +11,7 @@
         <h3 class="mb-heading typo-h-sm lg:typo-h-sm-desktop">
           {{ $prismic.asText(heading) }}
         </h3>
-        <prismic-rich-text :field="text" class="mb-text typo-b-md lg:typo-b-md-desktop" />
+        <RichText :data="text" />
         <div class="flex justify-end">
           <prismic-link :field="link" class="bg-gray-200 font-medium outline-black w-max">
             {{ $prismic.asText(linkLabel) }}

@@ -1,10 +1,14 @@
 <template>
-  <ContentMaxWidth class="y-space">
-    <div class="gutter">
+  <ContentMaxWidth v-if="showSlice" class="y-space">
+    <div class="gutter lg:px-2">
       <h2 class="mb-heading typo-h-lg lg:typo-h-lg-desktop">
         {{ $prismic.asText(heading) }}
       </h2>
-      <prismic-rich-text :field="text" class="mb-text typo-b-md lg:typo-b-md-desktop" />
+      <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-28 gap-y-6 lg:gap-y-10">
+        <div v-for="(item, index) in filterEmpty" :key="index">
+          <RichText :data="item.rich_text" />
+        </div>
+      </div>
     </div>
   </ContentMaxWidth>
 </template>
@@ -20,19 +24,19 @@ export default {
       },
     },
   },
-  data() {
-    return {}
-  },
   computed: {
     heading() {
       return this.slice?.primary?.heading
     },
     text() {
-      return this.slice?.primary?.rich_text
+      return this.slice?.items
+    },
+    filterEmpty() {
+      return this.text.filter((item) => Object.keys(item.rich_text).length !== 0)
+    },
+    showSlice() {
+      return Object.keys(this.heading).length !== 0
     },
   },
-  methods: {},
 }
 </script>
-
-<style scoped></style>

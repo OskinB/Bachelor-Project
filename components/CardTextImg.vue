@@ -1,5 +1,5 @@
 <template>
-  <div v-if="showSlice" class="mb-20 padding-card" :class="bgColor">
+  <div v-if="showSlice" class="mb-20 padding-card lg:px-2" :class="bgColor">
     <ContentMaxWidth>
       <div class="gutter sm:px-2 lg:px-0 sm:grid sm:grid-cols-3 sm:items-center sm:gap-6 lg:gap-10">
         <div class="mb-heading flex flex-col justify-center">
@@ -9,7 +9,7 @@
           <h3 class="mb-heading typo-h-sm lg:typo-h-md-desktop">
             {{ $prismic.asText(heading) }}
           </h3>
-          <prismic-rich-text :field="text" class="mb-text typo-b-md lg:typo-b-md-desktop" />
+          <RichText :data="text" />
           <div class="flex justify-end">
             <prismic-link :field="link" class="bg-gray-200 font-medium outline-black w-max">
               {{ $prismic.asText(linkLabel) }}

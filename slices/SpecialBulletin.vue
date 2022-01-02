@@ -1,10 +1,15 @@
 <template>
-  <ContentMaxWidth class="y-space">
-    <div class="gutter">
+  <ContentMaxWidth v-if="showSlice" class="y-space">
+    <div class="gutter lg:px-2">
       <h2 class="mb-heading typo-h-lg lg:typo-h-lg-desktop">
         {{ $prismic.asText(heading) }}
       </h2>
-      <Bulletpoint v-for="(item, i) in items" :key="i" :data="item" />
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-28 lg:gap-y-4">
+        <div v-for="(item, index) in filterEmpty" :key="index">
+          <Bulletpoint :data="item" />
+        </div>
+      </div>
     </div>
   </ContentMaxWidth>
 </template>
@@ -30,8 +35,13 @@ export default {
     items() {
       return this.slice?.items
     },
+    filterEmpty() {
+      return this.items.filter((item) => Object.keys(item.bulletin_text).length !== 0)
+    },
+    showSlice() {
+      return Object.keys(this.heading).length !== 0
+    },
   },
-  methods: {},
 }
 </script>
 

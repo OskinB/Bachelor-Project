@@ -1,7 +1,7 @@
 <template>
   <div class="y-space">
     <ContentMaxWidth>
-      <div class="gutter">
+      <div class="gutter lg:px-2">
         <h2 class="mb-heading typo-h-lg lg:typo-h-lg-desktop">
           {{ $prismic.asText(title) }}
         </h2>
@@ -35,7 +35,7 @@ export default {
       return this.slice?.items
     },
     filterEmpty() {
-      return this.slice.items.filter((item) => Object.keys(item.image).length !== 0)
+      return this.items.filter((item) => Object.keys(item.image).length !== 0)
     },
     gridCols() {
       if (this.filterEmpty?.length >= 3) return 3

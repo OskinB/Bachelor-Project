@@ -6,9 +6,8 @@
           <h2 class="mb-heading typo-h-lg lg:typo-h-lg-desktop">
             {{ $prismic.asText(heading) }}
           </h2>
-          <prismic-rich-text :field="text" class="mb-text typo-b-md lg:typo-b-md-desktop" />
+          <RichText :data="text" />
         </div>
-
         <div class="flex flex-col md:flex-row md:justify-end md:items-center">
           <input v-model="value" type="email" class="mb-2 lg:mb-0 lg:w-full md:mr-6 input" placeholder="Email" />
           <div class="flex justify-end">

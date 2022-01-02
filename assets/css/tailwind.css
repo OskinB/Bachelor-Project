@@ -16,6 +16,33 @@
   body {
     @apply antialiased font-body bg-white text-blackText;
   }
+  .wysiwyg {
+    counter-reset: bulletinCount;
+  }
+  .wysiwyg p,
+  ul,
+  ol {
+    @apply mb-6;
+  }
+  .wysiwyg a {
+    @apply underline ease-in-out duration-200 hover:text-teal;
+  }
+  .wysiwyg ul,
+  .wysiwyg ol {
+    @apply mx-4;
+  }
+  .wysiwyg li {
+    @apply relative pl-5 my-3;
+  }
+  .wysiwyg ol > li::before {
+    counter-increment: bulletinCount;
+    content: counter(bulletinCount) '. ';
+    @apply absolute top-0 left-0 font-semibold;
+  }
+  .wysiwyg ul > li::before {
+    content: '•';
+    @apply absolute top-[3px] left-0 text-teal;
+  }
 }
 
 @layer components {

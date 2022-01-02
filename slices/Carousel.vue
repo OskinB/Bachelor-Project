@@ -1,6 +1,6 @@
 <template>
   <ContentMaxWidth class="y-space">
-    <div class="gutter">
+    <div class="gutter lg:px-2">
       <h2 class="mb-heading typo-h-lg lg:typo-h-lg-desktop">
         {{ $prismic.asText(title) }}
       </h2>
