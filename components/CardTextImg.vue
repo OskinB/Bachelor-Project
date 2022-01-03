@@ -11,10 +11,7 @@
           </h3>
           <RichText :data="text" />
           <div class="flex justify-end">
-            <prismic-link :field="link" class="bg-gray-200 font-medium outline-black w-max">
-              {{ $prismic.asText(linkLabel) }}
-            </prismic-link>
-            <Button :label="linkLabel" />
+            <Button :label="linkLabel" :link="link" :btnType="btnType" />
           </div>
         </div>
       </div>
@@ -60,7 +57,7 @@ export default {
       return this.data?.link_label
     },
     link() {
-      return this.data?.link_label
+      return this.data?.link
     },
     btnType() {
       return this.data?.button_type

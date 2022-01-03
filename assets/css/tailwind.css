@@ -135,4 +135,9 @@
   .typo-h-menu {
     @apply font-heading text-base leading-[110%] font-semibold uppercase;
   }
+
+  /* *** BUTTON *** */
+  .typo-h-button {
+    @apply font-heading text-[13px] leading-[110%] font-medium uppercase;
+  }
 }

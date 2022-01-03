@@ -1,36 +1,39 @@
 <template>
-  <div class="m-5">
-    <button class="btn">
-      <span class="btn-paint"></span>
-      <span class="btn-paint"></span>
-      <span class="btn-paint"></span>
-      <span class="btn-paint"></span>
-      <span class="btn-label">{{ $prismic.asText(label) }}</span>
-    </button>
+  <div v-if="showBtn" class="inline-block">
+    <prismic-link :field="link" class="py-3 md:py-4 typo-h-button flex self-center w-max" :class="buttonType">
+      <span v-if="primaryBtn" class="btn-paint"></span>
+      <span v-if="primaryBtn" class="btn-paint"></span>
+      <span v-if="primaryBtn" class="btn-paint"></span>
+      <span v-if="primaryBtn" class="btn-paint"></span>
+      <span :class="primaryBtn ? 'btn-label' : ''">{{ $prismic.asText(label) }}</span>
+    </prismic-link>
   </div>
 </template>
 
 <script>
 export default {
-  props: { label: Array },
-  data() {
-    return {}
+  props: {
+    label: Array,
+    link: Object,
+    btnType: String,
   },
-  computed: {},
-  methods: {},
+  computed: {
+    primaryBtn() {
+      return this.btnType === 'Primary button'
+    },
+    buttonType() {
+      if (this.btnType === 'Primary button') return 'btn px-8 bg-green text-whiteText rounded-xl border border-teal ease-in-out duration-200'
+      return 'px-4 text-teal rounded-xl underline'
+    },
+    showBtn() {
+      return Object.keys(this.label).length !== 0
+    },
+  },
 }
 </script>
 
 <style scoped>
 .btn {
-  appearance: none;
-  padding: 20px 30px;
-  font-size: 24px;
-  border-radius: 59px;
-  border: 2px solid #008080;
-  color: #fff;
-  background-color: rgba(76, 176, 175, 1);
-  text-transform: uppercase;
   position: relative;
   top: 50%;
   left: 50%;
@@ -46,7 +49,6 @@ export default {
   top: 0;
   left: 0;
   background-color: #008080;
-  /* testa með width á hover litnum */
   width: 85px;
   height: 120px;
   transition: transform 0.4s ease;

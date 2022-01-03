@@ -56,7 +56,7 @@ export default {
       return this.data?.link_label
     },
     link() {
-      return this.data?.link_label
+      return this.data?.link
     },
     btnType() {
       return this.data?.button_type
