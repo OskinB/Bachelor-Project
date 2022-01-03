@@ -7,9 +7,7 @@
         </h1>
         <prismic-rich-text :field="text" class="mb-6 lg:mb-8 typo-b-lg lg:typo-b-lg-desktop" />
         <div v-if="showBtn" class="mb-6 flex justify-end">
-          <prismic-link :field="link" class="bg-gray-200 font-medium outline-black w-max">
-            {{ $prismic.asText(linkLabel) }}
-          </prismic-link>
+          <Button :label="linkLabel" :link="link" :btnType="btnType" />
         </div>
       </div>
       <div>

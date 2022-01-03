@@ -11,7 +11,15 @@
         <div class="flex flex-col md:flex-row md:justify-end md:items-center">
           <input v-model="value" type="email" class="mb-2 lg:mb-0 lg:w-full md:mr-6 input" placeholder="Email" />
           <div class="flex justify-end">
-            <button class="bg-gray-200 font-medium outline-black w-max" @click="clearInput">{{ $prismic.asText(linkLabel) || 'Subscribe' }}</button>
+            <div v-if="showBtn" class="inline-block">
+              <button class="py-3 md:py-4 typo-h-button flex self-center w-max btn px-8 bg-green text-whiteText rounded-xl border border-teal ease-in-out duration-200">
+                <span class="btn-paint"></span>
+                <span class="btn-paint"></span>
+                <span class="btn-paint"></span>
+                <span class="btn-paint"></span>
+                <span class="btn-label">{{ $prismic.asText(linkLabel) }}</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -57,6 +65,9 @@ export default {
       if (this.color === 'Green') return 'bg-green text-whiteText'
       if (this.color === 'Dark Grey') return 'bg-darkgrey text-whiteText'
       else return ''
+    },
+    showBtn() {
+      return Object.keys(this.linkLabel).length !== 0
     },
     showSlice() {
       if (this.heading[0]?.text === '') return false

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="showSlice" class="mb-10 padding-card md:px-6 bg-lightgrey">
+  <div v-if="showSlice" class="mb-10 padding-card md:px-6 rounded-lg bg-lightgrey">
     <div class="">
       <div class="mb-heading gutter lg:mx-8 justify-center">
         <nuxt-img v-if="image.url" :src="image.url" :alt="image.alt" class="h-[200px] lg:h-60 w-full max-w-md object-cover rounded-lg" />
@@ -13,9 +13,7 @@
         </h3>
         <RichText :data="text" />
         <div class="flex justify-end">
-          <prismic-link :field="link" class="bg-gray-200 font-medium outline-black w-max">
-            {{ $prismic.asText(linkLabel) }}
-          </prismic-link>
+          <Button :label="linkLabel" :link="link" :btnType="btnType" />
         </div>
       </div>
     </div>

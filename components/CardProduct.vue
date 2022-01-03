@@ -13,10 +13,8 @@
         </p>
       </div>
     </div>
-    <div class="flex justify-end items-end pb-8 md:pb-10 pr-2 md:pr-4">
-      <prismic-link :field="link" class="bg-gray-200 font-medium outline-black w-max">
-        {{ $prismic.asText(linkLabel) }}
-      </prismic-link>
+    <div class="flex justify-end p-2 md:p-4">
+      <Button :label="linkLabel" :link="link" :btnType="btnType" />
     </div>
   </div>
 </template>

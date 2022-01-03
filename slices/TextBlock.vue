@@ -1,5 +1,5 @@
 <template>
-  <ContentMaxWidth v-if="showSlice" class="y-space" :class="bgFiltered" :style="{ backgroundImage: styleImageUrl || '' }">
+  <ContentMaxWidth v-if="showSlice" class="y-space rounded-lg" :class="bgFiltered" :style="{ backgroundImage: styleImageUrl || '' }">
     <div class="gutter md:gutter-special padding-card flex flex-col justify-center">
       <div>
         <h2 class="mb-heading typo-h-lg lg:typo-h-lg-desktop">
@@ -8,9 +8,7 @@
         <RichText :data="text" />
       </div>
       <div class="flex justify-end">
-        <prismic-link :field="link" class="bg-gray-200 font-medium outline-black w-max">
-          {{ $prismic.asText(linkLabel) }}
-        </prismic-link>
+        <Button :label="linkLabel" :link="link" :btnType="btnType" />
       </div>
     </div>
   </ContentMaxWidth>
@@ -26,9 +24,6 @@ export default {
         return {}
       },
     },
-  },
-  data() {
-    return {}
   },
   computed: {
     heading() {
@@ -67,5 +62,3 @@ export default {
   },
 }
 </script>
-
-<style scoped></style>

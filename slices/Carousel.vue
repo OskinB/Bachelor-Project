@@ -4,7 +4,7 @@
       <h2 class="mb-heading typo-h-lg lg:typo-h-lg-desktop">
         {{ $prismic.asText(title) }}
       </h2>
-      <div>Carousel package</div>
+      <div>Carousel</div>
     </div>
   </ContentMaxWidth>
 </template>
