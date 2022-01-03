@@ -8,7 +8,7 @@
       </div>
     </ContentMaxWidth>
 
-    <CardTextImg v-for="(item, i) in items" :key="i" :data="item" />
+    <CardTextImg v-for="(item, i) in items" :key="i" :data="item" class="odd:text-pink-600" />
   </div>
 </template>
 

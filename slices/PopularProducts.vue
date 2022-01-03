@@ -1,5 +1,5 @@
 <template>
-  <div class="y-space">
+  <div v-if="showSlice" class="y-space">
     <ContentMaxWidth>
       <div class="gutter lg:px-2">
         <h2 class="mb-heading typo-h-lg lg:typo-h-lg-desktop">
@@ -7,7 +7,7 @@
         </h2>
       </div>
 
-      <div class="grid md:gap-6 grid-cols-1" :class="'md:grid-cols-' + gridCols">
+      <div class="grid md:gap-6 grid-cols-1 md:grid-cols-3">
         <div v-for="(item, index) in filterEmpty" :key="index" class="flex h-full">
           <CardPopularProduct :data="item" />
         </div>
@@ -37,9 +37,8 @@ export default {
     filterEmpty() {
       return this.items.filter((item) => Object.keys(item.image).length !== 0)
     },
-    gridCols() {
-      if (this.filterEmpty?.length >= 3) return 3
-      return this.filterEmpty?.length || 1
+    showSlice() {
+      return Object.keys(this.title).length !== 0
     },
   },
 }

@@ -52,6 +52,9 @@
   .gutter-special {
     @apply mx-[82px];
   }
+  .first-top-space {
+    @apply mt-20 lg:mt-[100px];
+  }
   .y-space {
     @apply my-20 lg:my-[230px];
   }
