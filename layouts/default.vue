@@ -2,6 +2,7 @@
   <div>
     <Navbar />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
@@ -10,6 +11,7 @@ export default {
   // Called before rendering the layout
   async middleware({ store, $prismic }) {
     await store.dispatch('fetchMenu', $prismic)
+    await store.dispatch('fetchFooter', $prismic)
   },
 }
 </script>

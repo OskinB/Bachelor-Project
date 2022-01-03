@@ -1,8 +1,6 @@
 <template>
-  <div class="text-blue-700 font-heading">
-    <prismic-link :field="primary.link">{{
-      $prismic.asText(primary.link_label || {})
-    }}</prismic-link>
+  <div class="typo-h-menu ease-in-out duration-200 hover:text-teal">
+    <prismic-link :field="primary.link">{{ $prismic.asText(primary.link_label || {}) }}</prismic-link>
   </div>
 </template>
 

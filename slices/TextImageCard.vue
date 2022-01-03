@@ -8,7 +8,7 @@
       </div>
     </ContentMaxWidth>
 
-    <CardTextImg v-for="(item, i) in items" :key="i" :data="item" class="odd:text-pink-600" />
+    <CardTextImg v-for="(item, index) in filterEmpty" :key="index" :data="item" />
   </div>
 </template>
 
@@ -29,6 +29,9 @@ export default {
     },
     items() {
       return this.slice?.items
+    },
+    filterEmpty() {
+      return this.items.filter((item) => Object.keys(item.image).length !== 0)
     },
   },
 }

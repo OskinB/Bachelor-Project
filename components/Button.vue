@@ -5,14 +5,14 @@
       <span class="btn-paint"></span>
       <span class="btn-paint"></span>
       <span class="btn-paint"></span>
-      <span class="btn-label">Click me now</span>
+      <span class="btn-label">{{ $prismic.asText(label) }}</span>
     </button>
   </div>
 </template>
 
 <script>
 export default {
-  props: {},
+  props: { label: Array },
   data() {
     return {}
   },
@@ -27,9 +27,9 @@ export default {
   padding: 20px 30px;
   font-size: 24px;
   border-radius: 59px;
-  border: 2px solid #000;
-  color: #000;
-  background-color: transparent;
+  border: 2px solid #008080;
+  color: #fff;
+  background-color: rgba(76, 176, 175, 1);
   text-transform: uppercase;
   position: relative;
   top: 50%;

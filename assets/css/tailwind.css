@@ -133,6 +133,6 @@
 
   /* *** MENU *** */
   .typo-h-menu {
-    @apply font-heading text-base leading-[110%] font-semibold;
+    @apply font-heading text-base leading-[110%] font-semibold uppercase;
   }
 }

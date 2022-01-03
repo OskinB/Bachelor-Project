@@ -2,7 +2,7 @@
   <div v-if="showSlice" class="mb-20 padding-card lg:px-2" :class="bgColor">
     <ContentMaxWidth>
       <div class="gutter sm:px-2 lg:px-0 sm:grid sm:grid-cols-3 sm:items-center sm:gap-6 lg:gap-10">
-        <div class="mb-heading flex flex-col justify-center">
+        <div class="mb-heading flex justify-center">
           <nuxt-img v-if="image.url" :src="image.url" :alt="image.alt" class="h-[200px] lg:h-80 w-full max-w-md object-cover rounded-lg" />
         </div>
         <div class="sm:col-span-2">
@@ -14,6 +14,7 @@
             <prismic-link :field="link" class="bg-gray-200 font-medium outline-black w-max">
               {{ $prismic.asText(linkLabel) }}
             </prismic-link>
+            <Button :label="linkLabel" />
           </div>
         </div>
       </div>

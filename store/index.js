@@ -1,5 +1,6 @@
 export const state = () => ({
   menu: {},
+  footer: {},
 })
 
 export const mutations = {
@@ -21,8 +22,18 @@ export const actions = {
       // commit('SET_ERROR', { name: 'menu', error: error })
     }
   },
+  async fetchFooter({ commit }, $prismic) {
+    try {
+      const footer = (await $prismic.api.getSingle('footer')).data
+      commit('SET_STATE', { name: 'footer', item: footer })
+    } catch (e) {
+      // const error = 'Please create a menu document'
+      // commit('SET_ERROR', { name: 'menu', error: error })
+    }
+  },
 }
 
 export const getters = {
   menu: (state) => state?.menu,
+  footer: (state) => state?.footer,
 }

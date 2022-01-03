@@ -1,7 +1,7 @@
 <template>
   <ContentMaxWidth>
     <div class="my-10 flex flex-col justify-center sm:gutter sm:flex-row sm:flex-wrap gap-2 sm:gap-4">
-      <div v-for="(item, index) in items" :key="index" class="">
+      <div v-for="(item, index) in filterEmpty" :key="index">
         <ProductCarousel :data="item" />
       </div>
     </div>
@@ -22,6 +22,9 @@ export default {
   computed: {
     items() {
       return this.slice?.items
+    },
+    filterEmpty() {
+      return this.items.filter((item) => Object.keys(item.image).length !== 0)
     },
   },
 }
