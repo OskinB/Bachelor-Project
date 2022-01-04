@@ -1,13 +1,5 @@
 <template>
-  <div class="max-w-contentMin">
-    <h1 class="typo-h-highlight-desktop text-teal">Index page</h1>
-    <slice-zone
-      type="home"
-      queryType="single"
-      :resolver="resolver"
-      :slices="data.body"
-    />
-  </div>
+  <slice-zone v-if="data.body.length !== 0" type="home" queryType="single" :resolver="resolver" :slices="data.body" />
 </template>
 
 <script>

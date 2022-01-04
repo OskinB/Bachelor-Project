@@ -7,6 +7,12 @@ export default function (doc) {
   if (doc.type === 'products') {
     return '/products/' + doc.uid
   }
+  if (doc.type === 'product_info') {
+    return '/product_info/' + doc.uid
+  }
+  if (doc.type === 'page') {
+    return '/page/' + doc.uid
+  }
   if (doc.uid) {
     return '/' + doc.uid
   }

@@ -3,13 +3,140 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .clip-path-left {
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .clip-path-right {
+    clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+  }
+}
+
 @layer base {
   body {
-    @apply antialiased font-body bg-white;
+    @apply antialiased font-body bg-white text-blackText;
+  }
+  .wysiwyg {
+    counter-reset: bulletinCount;
+  }
+  .wysiwyg p,
+  ul,
+  ol {
+    @apply mb-6;
+  }
+  .wysiwyg a {
+    @apply underline ease-in-out duration-200 hover:text-teal;
+  }
+  .wysiwyg ul,
+  .wysiwyg ol {
+    @apply mx-4;
+  }
+  .wysiwyg li {
+    @apply relative pl-5 my-3;
+  }
+  .wysiwyg ol > li::before {
+    counter-increment: bulletinCount;
+    content: counter(bulletinCount) '. ';
+    @apply absolute top-0 left-0 font-semibold;
+  }
+  .wysiwyg ul > li::before {
+    content: '•';
+    @apply absolute top-[3px] left-0 text-teal;
   }
 }
 
 @layer components {
+  .gutter {
+    @apply mx-4 lg:mx-0;
+  }
+  .gutter-special {
+    @apply mx-[82px];
+  }
+  .first-top-space {
+    @apply mt-20 lg:mt-[100px];
+  }
+  .y-space {
+    @apply my-20 lg:my-[230px];
+  }
+  .bot-space {
+    @apply mb-20 lg:mb-[230px];
+  }
+  .mb-heading {
+    @apply mb-6 lg:mb-10;
+  }
+  .mb-text {
+    @apply mb-6 lg:mb-10;
+  }
+  .padding-card {
+    @apply py-10 lg:py-14;
+  }
+  .input {
+    @apply px-4 py-2 text-sm lg:text-base text-blackText placeholder-grey bg-white appearance-none block w-full border border-grey rounded-md focus:outline-none focus:ring-teal focus:border-teal focus:z-10;
+  }
+  .bm-menu {
+    background-color: white !important;
+  }
+  .bm-overlay {
+    background-color: lightgrey !important;
+  }
+  .bm-cross {
+    background-color: black !important;
+    height: 24px !important;
+  }
+
+  /*  PRIMARY BTN */
+  .btn {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .btn-label {
+    position: relative;
+  }
+  .btn-paint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #008080;
+    width: 85px;
+    height: 120px;
+    transition: transform 0.4s ease;
+  }
+  .btn-paint:nth-child(1) {
+    transform-origin: 50% 0;
+    transform: translate(-35px, -20px) rotate(-20deg) scale(1, 0);
+  }
+  .btn-paint:nth-child(2) {
+    transform-origin: 50% 100%;
+    transform: translate(21px, -20px) rotate(20deg) scale(1, 0);
+    transition-delay: 0.2s;
+  }
+  .btn-paint:nth-child(3) {
+    transform-origin: 50% 0;
+    transform: translate(81px, -20px) rotate(-20deg) scale(1, 0);
+    transition-delay: 0.4s;
+  }
+  .btn-paint:nth-child(4) {
+    transform-origin: 50% 100%;
+    transform: translate(131px, -20px) rotate(20deg) scale(1, 0);
+    transition-delay: 0.7s;
+  }
+  .btn:hover > .btn-paint:nth-child(1) {
+    transform: translate(-35px, -20px) rotate(-20deg) scale(1, 1);
+  }
+  .btn:hover > .btn-paint:nth-child(2) {
+    transform: translate(21px, -20px) rotate(20deg) scale(1, 1);
+  }
+  .btn:hover > .btn-paint:nth-child(3) {
+    transform: translate(81px, -20px) rotate(-20deg) scale(1, 1);
+  }
+  .btn:hover > .btn-paint:nth-child(4) {
+    transform: translate(131px, -20px) rotate(20deg) scale(1, 1);
+  }
+
   /*  TYPOGRAPHY */
   /* *** HEADING *** */
   .typo-h-xl {
@@ -69,6 +196,11 @@
 
   /* *** MENU *** */
   .typo-h-menu {
-    @apply font-heading text-base leading-[110%] font-semibold;
+    @apply font-heading text-base leading-[110%] font-semibold uppercase;
+  }
+
+  /* *** BUTTON *** */
+  .typo-h-button {
+    @apply font-heading text-[13px] md:text-[15px] leading-[110%] font-medium uppercase;
   }
 }
