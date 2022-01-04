@@ -1,10 +1,5 @@
 <template>
-  <slice-zone
-    type="home"
-    queryType="single"
-    :resolver="resolver"
-    :slices="data.body"
-  />
+  <slice-zone v-if="data.body.length !== 0" type="home" queryType="single" :resolver="resolver" :slices="data.body" />
 </template>
 
 <script>

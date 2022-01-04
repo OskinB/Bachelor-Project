@@ -22,7 +22,7 @@ export default {
       return this.btnType === 'Primary button'
     },
     buttonType() {
-      if (this.btnType === 'Primary button') return 'btn px-8 bg-green text-whiteText rounded-xl border border-teal ease-in-out duration-200'
+      if (this.btnType === 'Primary button') return 'btn px-8 bg-green text-whiteText rounded-xl border border-lightTeal ease-in-out duration-200'
       return 'px-4 text-teal rounded-xl underline'
     },
     showBtn() {

@@ -73,6 +73,16 @@
   .input {
     @apply px-4 py-2 text-sm lg:text-base text-blackText placeholder-grey bg-white appearance-none block w-full border border-grey rounded-md focus:outline-none focus:ring-teal focus:border-teal focus:z-10;
   }
+  .bm-menu {
+    background-color: white !important;
+  }
+  .bm-overlay {
+    background-color: lightgrey !important;
+  }
+  .bm-cross {
+    background-color: black !important;
+    height: 24px !important;
+  }
 
   /*  PRIMARY BTN */
   .btn {

@@ -8,7 +8,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        teal: 'rgba(0, 128, 128, 1)', // Primary
+        teal: 'rgba(0, 128, 128, 1)', // primary
+        lightTeal: 'rgba(0, 128, 128, 0.5)', // border
         peach: 'rgba(255, 180, 140, 1)', // background
         green: 'rgba(76, 176, 175, 1)', // background
         lightgrey: 'rgba(236, 240, 238, 1)', // background
@@ -16,8 +17,8 @@ module.exports = {
         darkgrey: 'rgba(51, 51, 51, 1)', // background
         lightgreyFilter: 'rgba(236, 240, 238, 0.8)', // filter
         darkgreyFilter: 'rgba(51, 51, 51, 0.9)', // filter
-        whiteText: 'rgba(254, 254, 254, 1)', // Text
-        blackText: 'rgba(34, 34, 34, 1)', // Text
+        whiteText: 'rgba(254, 254, 254, 1)', // text
+        blackText: 'rgba(34, 34, 34, 1)', // text
       },
       maxWidth: {
         contentMax: '1248px',

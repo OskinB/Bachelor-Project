@@ -16,9 +16,9 @@
         </div>
 
         <div class="flex flex-col md:flex-row-reverse md:justify-between gap-10">
-          <div class="flex flex-row">
-            <prismic-link :field="facebook" class="group"><nuxt-img src="~/assets/facebook.svg" alt="Facebook" class="h-6 w-auto" /></prismic-link>
-            <prismic-link :field="instagram" class="group"><nuxt-img src="~/assets/instagram.svg" alt="Instagram" class="h-6 w-auto" /></prismic-link>
+          <div class="flex flex-row gap-6">
+            <prismic-link :field="facebook" class="group"><img src="~/assets/facebook.svg" alt="Facebook" class="h-6 w-auto" /></prismic-link>
+            <prismic-link :field="instagram" class="group"><img src="~/assets/instagram.svg" alt="Instagram" class="h-6 w-auto" /></prismic-link>
           </div>
           <div class="copyright flex flex-row">
             <span>&copy;{{ currentYear }} {{ $prismic.asText(companyName) }}. All rights reserved.</span>
@@ -75,5 +75,3 @@ export default {
   },
 }
 </script>
-
-<style scoped></style>

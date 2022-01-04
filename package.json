@@ -16,6 +16,7 @@
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7",
     "nuxt-sm": "^0.0.9",
+    "vue-burger-menu": "^2.0.5",
     "vue-slicezone": "^0.1.0"
   },
   "devDependencies": {
