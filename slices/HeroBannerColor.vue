@@ -42,7 +42,6 @@ export default {
     },
     showSlice() {
       if (this.title[0]?.text === '') return false
-      if (this.text[0]?.text === '') return false
       else return true
     },
   },
