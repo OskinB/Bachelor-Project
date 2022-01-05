@@ -13,8 +13,5 @@ export default function (doc) {
   if (doc.type === 'page') {
     return '/page/' + doc.uid
   }
-  if (doc.uid) {
-    return '/' + doc.uid
-  }
   return '/page-not-found'
 }

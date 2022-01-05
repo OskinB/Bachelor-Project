@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     heading() {
-      return this.slice?.primary.opening_hours_heading
+      return this.slice?.primary?.opening_hours_heading
     },
     items() {
       return this.slice?.items

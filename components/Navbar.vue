@@ -10,7 +10,7 @@
         </div>
         <Slide right :closeOnNavigation="true" class="lg:hidden">
           <a id="home">
-            <slice-zone type="main_menu" queryType="single" :resolver="resolver" :slices="links" class="flex flex-col gap-8" />
+            <slice-zone v-if="links.length !== 0" type="main_menu" queryType="single" :resolver="resolver" :slices="links" class="flex flex-col gap-8" />
           </a>
         </Slide>
       </nav>
@@ -43,3 +43,16 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.bm-menu {
+  background-color: white !important;
+}
+.bm-overlay {
+  background-color: lightgrey !important;
+}
+.bm-cross {
+  background-color: black !important;
+  height: 24px !important;
+}
+</style>

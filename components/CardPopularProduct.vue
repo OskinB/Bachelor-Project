@@ -31,9 +31,6 @@ export default {
       },
     },
   },
-  data() {
-    return {}
-  },
   computed: {
     heading() {
       return this.data?.heading
@@ -65,5 +62,3 @@ export default {
   },
 }
 </script>
-
-<style scoped></style>

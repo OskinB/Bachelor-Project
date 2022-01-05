@@ -9,19 +9,14 @@ export default {
   components: {
     SliceZone,
   },
-  props: {},
-  data() {
-    return {}
-  },
   async asyncData({ $prismic }) {
     try {
       const data = await $prismic.api.getSingle('home')
       return data
     } catch (error) {
-      console.log(error)
+      console.log('An error occurred')
     }
   },
-  computed: {},
   methods: {
     resolver({ sliceName }) {
       return import(`~/slices/${sliceName}.vue`)
@@ -29,5 +24,3 @@ export default {
   },
 }
 </script>
-
-<style scoped></style>

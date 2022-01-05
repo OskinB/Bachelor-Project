@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     heading() {
-      return this.slice?.primary.links_heading
+      return this.slice?.primary?.links_heading
     },
     links() {
       return this.slice?.items
