@@ -7,6 +7,12 @@
 import SliceZone from 'vue-slicezone'
 
 export default {
+  head() {
+    return {
+      title: this.pageTitle,
+      meta: [{ hid: 'description', name: 'description', content: 'Information about this dynamic site.' }],
+    }
+  },
   components: {
     SliceZone,
   },
@@ -20,6 +26,11 @@ export default {
     } catch (e) {
       error({ statusCode: 404, message: 'Page not found' })
     }
+  },
+  computed: {
+    pageTitle() {
+      return this.uid.replace(/\b\w/g, (l) => l.toUpperCase()) + ' - The Paint Shop'
+    },
   },
   methods: {
     resolver({ sliceName }) {

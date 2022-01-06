@@ -6,6 +6,10 @@
 import SliceZone from 'vue-slicezone'
 
 export default {
+  head: {
+    title: 'The Paint Shop',
+    meta: [{ hid: 'description', name: 'description', content: 'The Paint Shop sells professional paint for your home. We have various options of colors for indoor and outdoor.' }],
+  },
   components: {
     SliceZone,
   },
