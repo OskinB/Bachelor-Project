@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <Nuxt />
+    <Nuxt class="fade-in" />
     <Footer />
   </div>
 </template>

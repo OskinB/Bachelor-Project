@@ -1,6 +1,6 @@
 <template>
   <ContentMaxWidth class="bot-space">
-    <div v-if="showSlice" class="md:flex" :class="layout ? 'flex-row' : 'flex-row-reverse'">
+    <div v-if="showSlice" class="h-full md:flex" :class="layout ? 'flex-row' : 'flex-row-reverse'">
       <div class="gutter md:w-7/12 flex flex-col justify-center" :class="layout ? 'md:mr-4' : 'md:ml-4'">
         <h1 class="mb-4 lg:mb-10 typo-h-xl lg:typo-h-xl-desktop">
           {{ $prismic.asText(title) }}

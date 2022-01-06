@@ -1,7 +1,7 @@
 <template>
-  <div v-if="showSlice" :class="gradient">
+  <div v-if="showSlice" class="h-full lg:h-[550px]" :class="gradient">
     <ContentMaxWidth class="bot-space">
-      <div class="gutter md:gutter-special md:w-1/2 py-10 lg:py-32 flex flex-col justify-center">
+      <div class="gutter md:gutter-special md:w-1/2 py-20 md:py-32 flex flex-col justify-center">
         <h1 class="mb-4 lg:mb-10 typo-h-xl lg:typo-h-xl-desktop">
           {{ $prismic.asText(title) }}
         </h1>
