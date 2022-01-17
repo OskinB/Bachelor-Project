@@ -11,7 +11,7 @@
         </div>
       </div>
       <div>
-        <nuxt-img v-if="image.url" :src="image.url" :alt="image.alt" class="md:h-[650px] object-cover" :class="layout ? 'md:clip-path-left' : 'md:clip-path-right'" />
+        <img :src="image.url" :alt="image.alt" class="md:h-[650px] object-cover" :class="layout ? 'md:clip-path-left' : 'md:clip-path-right'" />
       </div>
     </div>
   </ContentMaxWidth>
@@ -31,7 +31,7 @@ export default {
   computed: {
     layout() {
       if (this.slice?.primary?.text_img_layout === 'Text left - Img right') return true
-      else return false
+      return false
     },
     title() {
       return this.slice?.primary?.title

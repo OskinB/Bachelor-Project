@@ -3,7 +3,7 @@
     <ContentMaxWidth>
       <nav class="flex justify-between items-center">
         <div class="mb-2">
-          <nuxt-img v-if="logo.url" :src="logo.url" :alt="logo.alt" class="h-14 object-cover" />
+          <img :src="logo.url" :alt="logo.alt" class="h-14 object-cover" />
         </div>
         <div class="hidden lg:block">
           <slice-zone v-if="links.length !== 0" type="main_menu" queryType="single" :resolver="resolver" :slices="links" class="flex flex-col md:flex-row md:gap-x-8" />

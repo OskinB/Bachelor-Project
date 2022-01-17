@@ -7,7 +7,7 @@
 
           <div class="mb-10 flex flex-col justify-self-start">
             <div class="mb-2">
-              <nuxt-img v-if="logo.url" :src="logo.url" :alt="logo.alt" class="h-12 lg:h-14 object-cover" />
+              <img :src="logo.url" :alt="logo.alt" class="h-12 lg:h-14 object-cover" />
             </div>
             <prismic-rich-text :field="address" class="" />
             <prismic-rich-text :field="phone" class="my-1" />
