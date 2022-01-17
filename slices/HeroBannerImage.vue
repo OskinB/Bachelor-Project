@@ -31,7 +31,7 @@ export default {
   computed: {
     layout() {
       if (this.slice?.primary?.text_img_layout === 'Text left - Img right') return true
-      return false
+      else return false
     },
     title() {
       return this.slice?.primary?.title
