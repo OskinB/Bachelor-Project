@@ -3,7 +3,7 @@
     <ContentMaxWidth>
       <div class="gutter sm:px-2 lg:px-0 sm:grid sm:grid-cols-3 sm:items-center sm:gap-6 lg:gap-10">
         <div class="mb-heading flex justify-center">
-          <nuxt-img v-if="image.url" :src="image.url" :alt="image.alt" class="h-[200px] lg:h-80 w-full max-w-md object-cover rounded-lg" />
+          <img :src="image.url" :alt="image.alt" class="h-[200px] lg:h-80 w-full max-w-md object-cover rounded-lg" />
         </div>
         <div class="sm:col-span-2">
           <h3 class="mb-heading typo-h-sm lg:typo-h-md-desktop">
@@ -29,9 +29,6 @@ export default {
         return {}
       },
     },
-  },
-  data() {
-    return {}
   },
   computed: {
     heading() {

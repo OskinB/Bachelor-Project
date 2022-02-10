@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-between border rounded-xl border-grey">
     <div class="mb-2 lg:mb-4">
-      <nuxt-img v-if="image.url" :src="image.url" :alt="image.alt" class="w-full object-cover rounded-t-xl" />
+      <img :src="image.url" :alt="image.alt" class="w-full object-cover rounded-t-xl" />
     </div>
     <div class="px-2 md:px-4">
       <h3 class="mb-heading typo-h-sm lg:typo-h-sm-desktop max-w-xs overflow-ellipsis overflow-hidden whitespace-nowrap">

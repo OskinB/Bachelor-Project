@@ -12,7 +12,7 @@
           <input v-model="value" type="email" class="mb-2 lg:mb-0 lg:w-full md:mr-6 input" placeholder="Email" />
           <div class="flex justify-end">
             <div v-if="showBtn" class="inline-block">
-              <button class="py-3 md:py-4 typo-h-button flex self-center w-max btn px-8 bg-green text-whiteText rounded-xl border border-lightTeal ease-in-out duration-200">
+              <button class="py-3 md:py-4 typo-h-button flex self-center w-max btn px-8 bg-green text-whiteText rounded-xl border border-lightTeal ease-in-out duration-200" @click="clearInput">
                 <span class="btn-paint"></span>
                 <span class="btn-paint"></span>
                 <span class="btn-paint"></span>

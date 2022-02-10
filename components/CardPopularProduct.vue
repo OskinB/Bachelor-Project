@@ -2,7 +2,7 @@
   <div v-if="showSlice" class="mb-10 padding-card md:px-6 rounded-lg bg-lightgrey">
     <div class="">
       <div class="mb-heading gutter lg:mx-8 justify-center">
-        <nuxt-img v-if="image.url" :src="image.url" :alt="image.alt" class="h-[200px] lg:h-60 w-full max-w-md object-cover rounded-lg" />
+        <img :src="image.url" :alt="image.alt" class="h-[200px] lg:h-60 w-full max-w-md object-cover rounded-lg" />
       </div>
       <div class="gutter">
         <h4 class="mb-2 text-teal typo-h-highlight lg:typo-h-highlight-desktop">
