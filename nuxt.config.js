@@ -36,7 +36,7 @@ export default {
   },
 
   prismic: {
-    endpoint: 'https://bachelor-project.prismic.io/api/v2',
+    endpoint: process.env.PRISMIC_API,
     modern: true,
   },
 
