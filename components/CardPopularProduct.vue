@@ -1,5 +1,5 @@
 <template>
-  <div v-if="showSlice" class="mb-10 padding-card md:px-6 rounded-lg bg-lightgrey">
+  <div v-if="showSlice" class="w-full mb-4 md:mb-0 padding-card md:px-6 rounded-lg bg-lightgrey">
     <div class="">
       <div class="mb-heading gutter lg:mx-8 justify-center">
         <img :src="image.url" :alt="image.alt" class="h-[200px] lg:h-60 w-full max-w-md object-cover rounded-lg" />

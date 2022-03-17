@@ -1,5 +1,5 @@
 <template>
-  <div v-if="showSlice" class="mb-20 padding-card lg:px-2" :class="bgColor">
+  <div v-if="showSlice" class="mb-4 lg:mb-10 padding-card lg:px-2" :class="bgColor">
     <ContentMaxWidth>
       <div class="gutter sm:px-2 lg:px-0 sm:grid sm:grid-cols-3 sm:items-center sm:gap-6 lg:gap-10">
         <div class="mb-heading flex justify-center">

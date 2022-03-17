@@ -1,7 +1,7 @@
 <template>
   <header class="py-6">
     <ContentMaxWidth>
-      <nav class="flex justify-between items-center">
+      <nav class="flex justify-between items-center gutter">
         <div class="mb-2">
           <img :src="logo.url" :alt="logo.alt" class="h-14 object-cover" />
         </div>

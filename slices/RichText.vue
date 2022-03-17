@@ -1,5 +1,5 @@
 <template>
-  <ContentMaxWidth v-if="showSlice" class="y-space">
+  <ContentMaxWidth v-if="showSlice" class="my-20 lg:my-36">
     <div class="gutter lg:px-2">
       <h2 class="mb-heading typo-h-lg lg:typo-h-lg-desktop">
         {{ $prismic.asText(heading) }}

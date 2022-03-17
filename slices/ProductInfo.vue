@@ -1,5 +1,5 @@
 <template>
-  <ContentMaxWidth v-if="showSlice">
+  <ContentMaxWidth v-if="showSlice" class="mb-20">
     <div class="first-top-space">
       <div class="gutter lg:px-2">
         <button type="button" @click="hasHistory() ? $router.go(-1) : $router.push('/')" class="mb-4 text-grey typo-h-highlight lg:typo-h-highlight-desktop">&laquo; Back</button>
