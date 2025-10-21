@@ -5,8 +5,8 @@ My solution allows the client to control the content on his site and build new p
 <br><br>
 
 <p align="center" > 
-    <img src="./Screenshot.jpg" alt="The Paint Shop" width="770"  />
-    <img src="./Screenshot-mobile.jpg" alt="The Paint Shop" width="186"/>
+    <img src="./Screenshot.jpg" alt="The Paint Shop" width="620"  />
+    <img src="./Screenshot-mobile.jpg" alt="The Paint Shop" width="150"/>
 </p>
 
 ## How I achieved this
